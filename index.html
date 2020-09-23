@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Travel</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+   <!-- Header -------------------------------------------------------------------------------->
+   <section class="section-header section-outer">
+      <div class="section-inner">
+         <div class="section-header-wrapper">
+            <div class="section-header-wrapper-logo"><a href="#">TakeMe</a></div>
+            <ul class="section-header-wrapper-nav" id="nav">
+               <li><a href="#" data-scroll="#places">Locations</a></li>
+               <li><a href="#" data-scroll="#cities">Accommodation</a></li>
+               <li><a href="#" data-scroll="#entert">Travel Guides</a></li>
+               <li><a href="#" data-scroll="#subscr">Where To Stay</a></li>
+               <li><a href="#" data-scroll="#contact">Contact Us</a></li>
+               <li><button class="btnLog" data-modalLog="modal-header">Log In</button></li>
+            </ul>
+         </div>
+      </div>
+   </section>
+
+   <div class="modal-header" id="modal-header">
+      <div class="modal-overlay">
+         <div class="modal-header-wrap">
+            <form class="log-form" action="">
+               <h1 class="log-form__title">Log In</h1>
+               <div class="log-form__group">
+                  <input class="log-form__input" type="email" placeholder=" ">
+                  <label class="log-form__label">Email</label>
+               </div>
+               <div class="log-form__group">
+                  <input class="log-form__input" type="password" placeholder=" ">
+                  <label class="log-form__label">Password</label>
+               </div>
+               <button>Enter</button>
+               <span class="close">&times;</span>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!-- /Header -------------------------------------------------------------------------------->
+
+   <!-- Find -------------------------------------------------------------------------------->
+   <section class="section-find section-outer foo">
+      <div class="section-inner">
+         <div class="section-find-headline">
+            <div class="section-find-headline__title">
+               Find Your Dream Vacation Location
+            </div>
+            <div class="section-find-headline__subtitle">
+               Search hundreds of locations from around the world and find your perfect vacation location.
+            </div>
+            <form class="section-find-headline__form" action="">
+               <div class="section-find-headline__form-input">
+                  <input class="input1" type="text" placeholder="Country or ZIP code">
+               </div>
+               <div class="section-find-headline__form-input"><input type="text" placeholder="Transportation"></div>
+               <div class="section-find-headline__form-input"><input type="text" placeholder="Number of people"></div>
+               <button data-modalFind="modal-find">Search</button>
+            </form>
+         </div>
+      </div>
+   </section>
+
+   <div class="modal-find" id="modal-find">
+      <div class="modal-overlay">
+         <div class="modal-find-wrap">
+            <div class="modal-find-wrap-content">
+               <h1>Search box</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, odit quas. Eum, aperiam sed.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, dolorem!</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quia asperiores autem blanditiis
+                  perspiciatis natus.</p>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum eius mollitia facilis dolorem!
+               </p>
+               <span class="close">&times;</span>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- /Find -------------------------------------------------------------------------------->
+
+   <!-- Places -------------------------------------------------------------------------------->
+   <section class="section-places section-outer" id="places">
+      <div class="section-inner">
+         <div class="section-places-wrap">
+            <div class="section-places-wrap__content">
+               <div class="title">
+                  Magical Santorini
+                  Greece’s Jewel
+               </div>
+               <div class="subtitle">
+                  Candy-colored houses carved into cliffs, sapphire waters,
+                  gleaming white buildings topped with half-spheres
+                  the color of a stormy sky.
+               </div>
+               <button data-modal="#places-modal">Explore More</button>
+            </div>
+            <div class="section-places-wrap__imgs">
+               <img class="place" src="imgs/place1.png" alt="">
+               <img class="place" src="imgs/place2.png" alt="">
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <div class="modal-places" id="places_modal">
+      <div class="modal-overlay">
+         <div class="modal-places-window">
+            <div class="slider">
+
+               <div class="item">
+                  <img src="imgs/place1.png">
+               </div>
+               <div class="item">
+                  <img src="imgs/place2.png">
+               </div>
+               <div class="item">
+                  <img src="imgs/place3.jpg">
+               </div>
+               <div class="item">
+                  <img src="imgs/place4.jpg">
+               </div>
+
+               <a class="previous" onclick="previousSlide()">&#10094;</a>
+               <a class="next" onclick="nextSlide()">&#10095;</a>
+               <span class="close">&times;</span>
+            </div>
+            
+         </div>
+      </div>
+   </div>
+   <!-- /Places -------------------------------------------------------------------------------->
+
+   <!-- Cities -------------------------------------------------------------------------------->
+   <section class="section-cities section-outer" id="cities">
+      <div class="section-inner">
+         <div>
+            <div class="section-cities-wrap">
+
+               <div class="section-cities-wrap-city">
+                  <img src="imgs/paris.png" alt="">
+                  <h1 class="section-cities-wrap-city__h1">Magical Paris</h1>
+                  <p class="section-cities-wrap-city__p">
+                     City of light, one of the most famous cities in the world is waiting to be explored. Some of the
+                     most
+                     famous museums, food and landmarks are waiting for you in Paris.
+                  </p>
+                  <div class="section-cities-wrap-city__rating">
+                     <div class="city_stars">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/half_star.png" alt="">
+                     </div>
+                     <div class="city_ratings">
+                        2436 Ratings
+                     </div>
+                  </div>
+               </div>
+
+               <div class="section-cities-wrap-city">
+                  <img src="imgs/london.png" alt="">
+                  <h1 class="section-cities-wrap-city__h1">Classic London</h1>
+                  <p class="section-cities-wrap-city__p">
+                     City of history, one of the most famous cities in the world is waiting to be explored. Some of the
+                     most
+                     famous museums, food, pubs and landmarks are waiting for you in London.
+                  </p>
+                  <div class="section-cities-wrap-city__rating">
+                     <div class="city_stars">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/half_star.png" alt="">
+                     </div>
+                     <div class="city_ratings">
+                        5438 Ratings
+                     </div>
+                  </div>
+               </div>
+
+               <div class="section-cities-wrap-city">
+                  <img src="imgs/new_york.png" alt="">
+                  <h1 class="section-cities-wrap-city__h1">Famous New York</h1>
+                  <p class="section-cities-wrap-city__p">
+                     City of history, one of the most famous cities in the world is waiting to be explored. Some of the
+                     most
+                     famous museums, food, pubs and landmarks are waiting for you in London.
+                  </p>
+                  <div class="section-cities-wrap-city__rating">
+                     <div class="city_stars">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/star.png" alt="">
+                        <img src="imgs/half_star.png" alt="">
+                     </div>
+                     <div class="city_ratings">
+                        1243 Ratings
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- /Cities -------------------------------------------------------------------------------->
+
+   <!-- Entertainment -------------------------------------------------------------------------------->
+   <section class="entertainment section-outer" id="entert">
+      <div class="section-inner">
+         <div class="entertainment-wrap">
+
+            <div class="entertainment-wrap-img">
+               <img src="imgs/sea.png" alt="">
+               <div class="entertainment-wrap-img__title">
+                  <p>Professional Guides</p>
+                  <h1>Sea Voyages</h1>
+               </div>
+               <div class="entertainment-wrap-img__visit">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/empty_star.png" alt="">
+                  <p>126 Visited</p>
+               </div>
+            </div>
+
+            <div class="entertainment-wrap-img">
+               <img src="imgs/mountain.png" alt="">
+               <div class="entertainment-wrap-img__title">
+                  <p>Safe Guides</p>
+                  <h1>Mountain Climbs</h1>
+               </div>
+               <div class="entertainment-wrap-img__visit">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/empty_star.png" alt="">
+                  <p>241 Visited</p>
+               </div>
+            </div>
+
+            <div class="entertainment-wrap-img">
+               <img src="imgs/ride.png" alt="">
+               <div class="entertainment-wrap-img__title">
+                  <p>Expert Drivers</p>
+                  <h1>Quad Rides</h1>
+               </div>
+               <div class="entertainment-wrap-img__visit">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/star.png" alt="">
+                  <img src="imgs/empty_star.png" alt="">
+                  <p>296 Visited</p>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+   <!-- /Entertainment -------------------------------------------------------------------------------->
+
+   <!-- Subscribe -------------------------------------------------------------------------------->
+   <section class="subscribe section-outer" id="subscr">
+      <div class="section-inner">
+         <div class="subscribe-wrap">
+            <div class="subscribe-wrap__content">
+               <h1>Subscribe to our newsletter</h1>
+               <p>
+                  And receive all the latest news, discounts and updates about the most visited
+                  locations from around the globe, daily.
+               </p>
+            </div>
+            <button class="subscribe-wrap__btn" data-modalSubs="modal-subs">Subscribe</button>
+         </div>
+      </div>
+   </section>
+
+   <div class="modal-subs" id="modal-subs">
+      <div class="modal-overlay">
+         <div class="modal-subs-wrap">
+            <form class="modal-form" action="">
+               <input type="email" placeholder="Your Email">
+               <button>Subscribe</button>
+               <span class="close">&times;</span>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!-- /Subscribe -------------------------------------------------------------------------------->
+
+   <!-- Contact Us -------------------------------------------------------------------------------->
+   <section class="contact section-outer" id="contact">
+      <div class="section-inner">
+         <div class="contact-wrap">
+            <div class="contact-wrap-content">
+               <!-- <h1>Contact Us</h1> -->
+               <form class="contact-wrap-content-form" action="">
+
+                  <table>
+                     <caption class="table-title">Contact Us</caption>
+                     <tr>
+
+                        <td>
+                           <label for="fname">First Name</label>
+                           <input id="fname" type="text" placeholder="First Name">
+                        </td>
+                        <td>
+                           <label for="lname">Last Name</label>
+                           <input id="lname" type="text" placeholder="Last Name">
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <label for="email">Email</label><br>
+                           <input id="email" type="email" placeholder="Email">
+                        </td>
+                        <td>
+                           <label for="phone">Phone</label>
+                           <input id="phone" type="tel" placeholder="Phone">
+                        </td>
+                     </tr>
+                     <tr>
+                        <td colspan="2">
+                           <label for="tarea">Message</label><br>
+                           <textarea id="tarea" name="" cols="30" rows="10" placeholder="Your message"></textarea>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td><button type="submit" id="btnSend">Send</button></td>
+                     </tr>
+                  </table>
+               </form>
+            </div>
+            <div class="dimg">
+               <!-- <img src="imgs/contact.png" alt=""> -->
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- /Contact Us -------------------------------------------------------------------------------->
+   <!-- Dubai -------------------------------------------------------------------------------->
+   <section class="dubai section-outer">
+      <div class="section-inner">
+         <div class="dubai__title">See Dubai from the sky</div>
+         <div class="dubai__video">
+            <video id="vid" width="100%" height="100%" src="imgs/dubai.mp4" controls></video>
+            <div class="playVid" id="playVid">
+               <img src="imgs/dubai_vid.png" alt="">
+               <img src="imgs/play.png" alt="">
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- /Dubai -------------------------------------------------------------------------------->
+
+   <!-- Free App -------------------------------------------------------------------------------->
+   <section class="app section-outer">
+      <div class="section-inner">
+         <div class="app-img"><img src="imgs/iphone.png" alt=""></div>
+         <div class="app-content">
+            <div class="app-content__title">Download Our Free App!</div>
+            <div class="app-content__description">Download our free app and stay up to date with all our latest
+               discounts, articles and reviews. Take a look at
+               all the world’s top destinations and decide where to spend your perfect vacation.</div>
+            <button id="btnApp">Download Now</button>
+         </div>
+      </div>
+   </section>
+   <!-- /Free App -------------------------------------------------------------------------------->
+
+   <!-- Footer -------------------------------------------------------------------------------->
+   <section class="footer section-outer">
+      <div class="section-inner">
+         <div class="footer-pillars">
+            <div class="footer-pillars__pill">
+               <ul><span>Company</span>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Careers</a></li>
+                  <li><a href="">Contact Us</a></li>
+                  <li><a href="">Affiliates</a></li>
+                  <li><a href="">News</a></li>
+                  <li><a href="">Our App</a></li>
+                  <li><a href="">Site Map</a></li>
+               </ul>
+            </div>
+            <div class="footer-pillars__pill">
+               <ul><span>Useful Links</span>
+                  <li><a href="">Travel Safe</a></li>
+                  <li><a href="">Stay Healthy</a></li>
+                  <li><a href="">Flight Monitor</a></li>
+                  <li><a href="">Booking List</a></li>
+               </ul>
+            </div>
+            <div class="footer-pillars__pill">
+               <ul><span>For Companies</span>
+                  <li><a href="">Advertise With Us</a></li>
+                  <li><a href="">How It Works</a></li>
+                  <li><a href="">Pricing Models</a></li>
+                  <li><a href="">VAT Numbers</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer-contact">
+            <div class="footer-contact__title">Stay in Touch</div>
+            <form class="footer-contact__form formG" action="">
+               <input type="text" name="" id="" placeholder="Your Email">
+               <button>Subscribe</button>
+            </form>
+            <div class="footer-contact__socials">
+               <a href="http://twitter.com"><img src="imgs/twitter.png" alt=""></a>
+               <a href="https://www.instagram.com"><img src="imgs/instagram.png" alt=""></a>
+               <a href="https://ru-ru.facebook.com"><img src="imgs/facebook.png" alt=""></a>
+               <a href="https://www.google.ru"><img src="imgs/google.png" alt=""></a>
+            </div>
+         </div>
+         <!-- <div class="footer-bottom">
+         <div class="footer-bottom__r"><hr>© 2017 TakeMe Free UI Kit</div>
+         <div class="footer-bottom__l">
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+            <a href="">Cookies Policy</a>
+         </div>
+      </div> -->
+      </div>
+   </section>
+   <!-- /Footer -------------------------------------------------------------------------------->
+
+   <script src="main.js"></script>
+</body>
+
+</html>
